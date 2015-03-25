@@ -1,19 +1,23 @@
 # Configuração de Ambiente RoR
-Passos de configuração de ambiente de desenvolvimento em Ruby on Rails com Rbenv no Ubuntu
+r
+teste
+r
 
-Configurar uma estação linux para desenvolver em Ruby on Rails não é uma tarefa complicada como se poderia pensar. O importante é perceber que há uma lógica de camadas de dependências em infraestrutura que, embora seja válida a ideia de ter um mapa mental delas, não é o fim do mundo resumir e automizar esta tarefa.
+Este manual apresenta os passos de configuração de ambiente de desenvolvimento em Ruby on Rails uso com Rbenv no Ubuntu, compreendendo uma iniciativa do Grupo de Pesquisa e Extensão em Tecnologia da Informação (GTE) do [Instituto Federal de Educação, Ciência e Tecnologia do Amapá](https://ifap.edu.br/).
+[(IFAP)](https://ifap.edu.br/)
 
 ## Sumário
 
 * [Sobre o Ruby on Rails](#sobre-o-ruby-on-rails)
+* [Atualizações no sistema](#atualiza-oes-no-sistema)
   * [Understanding PATH](#understanding-path)
-* [Installation](#installation)
-  * [Basic GitHub Checkout](#basic-github-checkout)
     * [Upgrading](#upgrading)
 
 ## Sobre o Ruby on Rails
 
-## How It Works
+Configurar uma estação linux para desenvolver em Ruby on Rails não é uma tarefa complicada como se poderia imaginar. O importante é perceber que há uma lógica de camadas de dependências em infraestrutura que, embora seja válida a ideia de executá-la por meio de scripts, também é interessante saber fazer na mão.
+
+## Atualizações no sistema
 
 ### Understanding PATH
 
@@ -39,7 +43,8 @@ Nota: o “ruby-build” é opcional, embora recomendável. Agora deve-se adicio
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
 ````
 
-E aí você pode perguntar: “mas o que é o path?” [Leonardo Amorim](http://www.vivaolinux.com.br/artigo/O-que-e-PATH-como-funciona-e-como-trabalhar-com-ele) diz que : `$PATH:` é uma variável do sistema Linux que indica trajetória (tradução do inglês) dos binários (executáveis dos programas), que podem ser executados sem indicar o caminho completo (geralmente ele é muito longo) da onde eles estão.
+E aí você pode perguntar: “mas o que é o path?” [Leonardo Amorim](http://www.vivaolinux.com.br/artigo/O-que-e-PATH-como-funciona-e-como-trabalhar-com-ele) diz: `$PATH:` 
+> É uma variável do sistema Linux que indica trajetória (tradução do inglês) dos binários (executáveis dos programas), que podem ser executados sem indicar o caminho completo (geralmente ele é muito longo) da onde eles estão.
 
 Para ativar o rbenv:
 ````
@@ -49,7 +54,8 @@ E recarregar a sessão do shell:
 ````
 $ exec $SHELL -l
 ````
-Para quem ainda não sabe, [Leonardo Xavier](http://www.vivaolinux.com.br/artigo/Uma-introducao-ao-shell-%28parte-1%29) diz que: O shell é um módulo que atua como interface usuário - sistema operacional, possuindo diversos comandos internos que permitem ao usuário solicitar serviços do sistema operacional. O shell também implementa um linguagem simples de programação que permite o desenvolvimento de pequenos programas (os famosos shell scripts)
+Para quem ainda não sabe, [Leonardo Xavier](http://www.vivaolinux.com.br/artigo/Uma-introducao-ao-shell-%28parte-1%29) diz:
+> O shell é um módulo que atua como interface usuário - sistema operacional, possuindo diversos comandos internos que permitem ao usuário solicitar serviços do sistema operacional. O shell também implementa um linguagem simples de programação que permite o desenvolvimento de pequenos programas (os famosos shell scripts)
 
 Finalmente podemos testar o Rbenv:
 ````
@@ -70,7 +76,7 @@ Mesmo sendo possível instalar várias versões, é importante especificar a ver
 $ rbenv global 1.9.3-p392
 ````
 A documentação para definir versões customizada de projetos está [aqui](https://github.com/sstephenson/rbenv#rbenv-local).
-Uma vez setada versão do ruby, caberá o bundler http://bundler.io/ gerenciar as dependências das gems nos projetos a serem desenvolvidos: 
+Uma vez setada versão do ruby, caberá o [bundler](http://bundler.io/) gerenciar as dependências das gems nos projetos a serem desenvolvidos: 
 ````
 gem install bundler
 ````
