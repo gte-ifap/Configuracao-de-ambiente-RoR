@@ -6,18 +6,20 @@ Este manual apresenta os passos de configuração de ambiente de desenvolvimento
 ## Sumário
 
 * [Sobre o Ruby on Rails](#sobre-o-ruby-on-rails)
-* [Atualizações no sistema](#atualiza-oes-no-sistema)
+* [Bibliotecas no sistema](#bibliotecas-no-sistema)
 * [O versionador rbenv](#o-versionador-rbenv)
   * [Rbenv vs Rvm](#rbenv-vs-rvm)
+  * [Path e Shell](#path-e-shell)
+   * [Funcionando o Rbenv](#funcionando-o-rbenv)
   * [Instalando o Ruby](#instalando-o-ruby)
    * [Sobre o Bundler](#sobre-o-bundler)
- * [Finalizando com Rails](#finalizando-com-rails)
+* [Finalizando com Rails](#finalizando-com-rails)
 
 ## Sobre o Ruby on Rails
 
 Configurar uma estação linux para desenvolver em Ruby on Rails não é uma tarefa complicada como se poderia imaginar. O importante é perceber que há uma lógica de camadas de dependências em infraestrutura que, embora seja válida a ideia de executá-la por meio de scripts, também é interessante saber fazer na mão.
 
-## Atualizações no sistema
+## Bibliotecas no sistema
 
 Inicialmente, deve-se atualizar o sistema:
 
@@ -45,6 +47,8 @@ $ git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-
 ````
 Nota: o “ruby-build” é opcional, embora recomendável.
 
+### Path e Shell
+
 Agora deve-se adicionar ~/.rbenv/bin ao seu `$PATH` : 
 ````
 $ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.profile
@@ -64,21 +68,23 @@ $ exec $SHELL -l
 Para quem ainda não sabe, [Leonardo Xavier](http://www.vivaolinux.com.br/artigo/Uma-introducao-ao-shell-%28parte-1%29) diz:
 > O shell é um módulo que atua como interface usuário - sistema operacional, possuindo diversos comandos internos que permitem ao usuário solicitar serviços do sistema operacional. O shell também implementa um linguagem simples de programação que permite o desenvolvimento de pequenos programas (os famosos shell scripts)
 
-### Funcionando o Rbenv
+#### Funcionando o Rbenv
 
 Finalmente podemos testar o Rbenv:
 ````
 $ rbenv
 ````
 
-Para visualizar as versões disponíveis para instalação:
-````
+### Instalando o Ruby
+
+Para visualizar e selecionar as versões disponíveis para instalação:
+~~~ sh
+# lista todas as versões disponíveis:
 $ rbenv install -l
-````
-Para instalar uma versão:
-````
-$ rbenv install 1.9.3-p392
-````
+
+# instala uma versão do Ruby:
+$ rbenv install 2.0.0
+~~~
 
 Mesmo sendo possível instalar várias versões, é importante especificar a versão default:
 ````
